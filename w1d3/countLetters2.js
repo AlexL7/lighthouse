@@ -5,16 +5,16 @@ function countLetters(string){
   for( var i = 0; i<singleLetters.length ; i++)
   {
     if (!list[singleLetters[i]]){
-        list[singleLetters[i]] = 1;
+        list[singleLetters[i]] = [i];
 
     }
     else{
 
-    list[singleLetters[i]] += 1 ;
+    list[singleLetters[i]].push(i);
   }
 
   }
   return list;
 }
 
-console.log(countLetters("hello"));
+console.log(countLetters("alexander"));
